@@ -20,36 +20,43 @@ import com.swproject.workshopmongodb.services.UserService;
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<UserDTO>> findAll(){
+	public ResponseEntity<List<UserDTO>> findAll() {
 		List<User> list = userService.findAll();
-		List<UserDTO> listDTO = list.stream()
-				.map(x -> new UserDTO(x))
-				.collect(Collectors.toList());
+		List<UserDTO> listDTO = list.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.GET)
-	public ResponseEntity<UserDTO> finById(@PathVariable String id){
-		//User obj = userService.findById(id);
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public ResponseEntity<UserDTO> finById(@PathVariable String id) {
+		// User obj = userService.findById(id);
 		return ResponseEntity.ok().body(new UserDTO(userService.findById(id)));
 	}
-	
+
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Void> insert(@RequestBody UserDTO objDto){
+	public ResponseEntity<Void> insert(@RequestBody UserDTO objDto) {
 		User obj = userService.fromDTO(objDto);
 		obj = userService.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
-	
-	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Void> delete(@PathVariable String id){
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<Void> delete(@PathVariable String id) {
 		userService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Void> update(@RequestBody UserDTO objDto, @PathVariable String id) {
+		User obj = userService.fromDTO(objDto);
+		obj.setId(id);
+		obj = userService.update(obj);
+		return ResponseEntity.noContent().build();
+	}
+
 }
