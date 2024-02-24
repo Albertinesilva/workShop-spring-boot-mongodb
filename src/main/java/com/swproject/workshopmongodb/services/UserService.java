@@ -50,14 +50,4 @@ public class UserService {
 		newObj.setEmail(obj.getEmail());
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
