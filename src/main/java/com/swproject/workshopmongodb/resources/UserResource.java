@@ -16,7 +16,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.swproject.workshopmongodb.domain.Post;
 import com.swproject.workshopmongodb.domain.User;
 import com.swproject.workshopmongodb.dto.UserDTO;
-import com.swproject.workshopmongodb.repository.UserRepositoty;
 import com.swproject.workshopmongodb.services.UserService;
 
 @RestController
