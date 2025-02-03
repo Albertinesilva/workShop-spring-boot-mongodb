@@ -1,0 +1,5 @@
+<h1 align="center">🔗 Projeto MongoDB com Spring Boot e Spring Data (MongoRepository)</h1>
+
+<h2 align="center">Curso Udemy: Programação Orientada a Objetos com Java</h2>
+
+Este projeto faz parte do curso de Programação Orientada a Objetos com Java, ministrado na Udemy. O objetivo principal foi criar uma aplicação web utilizando Spring Boot e Spring Data para MongoDB, estruturando o sistema em camadas lógicas e implementando operações básicas de CRUD (Create, Retrieve, Update, Delete). Durante o desenvolvimento, foram exploradas as principais diferenças entre o paradigma orientado a documentos e o relacional, além da implementação de associações entre objetos, utilizando objetos aninhados e referências. Também foram realizadas consultas eficientes com Spring Data e MongoRepository, refletindo sobre as melhores decisões de design para um banco de dados orientado a documentos.
