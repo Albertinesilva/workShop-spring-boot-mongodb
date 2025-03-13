@@ -452,6 +452,6 @@ Em resumo, este projeto foi uma excelente oportunidade para aprofundar os conhec
 
 Espero que isso reflita com precisão seu projeto e seja útil para seu portfólio! Se precisar de mais algum ajuste, estou aqui para ajudar.
 
-#### 📌 Autor
-
-👨‍💻 **Albert Silva**
+| 🌎 LinkedIn | 👨‍💻 **Autor** |
+|------------|---------------|
+| [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
